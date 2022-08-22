@@ -11,8 +11,8 @@ INSTL = ['dmg', 'exe', 'iso']
 
 
 #Create folders where files will be move
-BASE_PATH = os.path.expanduser('G:')
-DEST_DIRS = ['Music', 'Movies', 'Pictures', 'Archives', 'Docs', 'Applications', 'Other']
+BASE_PATH = os.path.expanduser('G:') #Directory where downloads folder is located (for me it is disk G:)
+DEST_DIRS = ['Music', 'Movies', 'Pictures', 'Archives', 'Docs', 'Applications', 'Other'] #Folders names where files will be moved
 
 for d in DEST_DIRS:
     dir_path = os.path.join(BASE_PATH, d)
@@ -20,7 +20,7 @@ for d in DEST_DIRS:
         os.mkdir(dir_path)
 
 #Select files according to their extensions
-DOWNLOADS_PATH = os.path.join(BASE_PATH, 'Downloads')
+DOWNLOADS_PATH = os.path.join(BASE_PATH, 'Downloads') #Creating downloads folder path
 files_mapping = collections.defaultdict(list)
 files_list = os.listdir(DOWNLOADS_PATH)
 
