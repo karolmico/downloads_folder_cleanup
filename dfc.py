@@ -1,6 +1,6 @@
 import os
 import collections
-from pprint import pprint
+
 
 AUDIO = ['mp3', 'wav', 'raw', 'wma', 'mid', 'midi']
 VIDEO = ['mp4', 'mpg', 'mpeg', 'avi', 'mov', 'flv', 'mkv', 'mwv', 'm4v', 'h264']
@@ -29,7 +29,7 @@ for file_name in files_list:
         file_ext = file_name.split('.')[-1]
         files_mapping[file_ext].append(file_name)
 
-#pprint(files_mapping)
+
 
 #Moving files to folders corresponding to their extensions
 for f_ext, f_list in files_mapping.items():
